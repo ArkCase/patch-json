@@ -1,0 +1,10 @@
+{
+    "component": {
+        "title": "Title",
+        "description": "Description",
+        "subcomponent": {
+            "title": "Subcomponent title",
+            "description": "Subcomponent description"
+        }
+    }
+}

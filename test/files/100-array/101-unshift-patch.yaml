@@ -1,0 +1,7 @@
+# Insert new item at the beginning of menu array
+component.menu:
+  - ACTION: UNSHIFT
+    VALUE:
+      id: 'item0'
+      title: 'Menu Item 0'
+

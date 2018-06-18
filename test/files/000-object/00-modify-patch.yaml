@@ -1,0 +1,4 @@
+# Modify Title
+component.title:
+  - ACTION: SET
+    VALUE: 'New Title'

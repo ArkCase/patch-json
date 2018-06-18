@@ -1,0 +1,6 @@
+# Append new item to menu array
+component.menu:
+  - ACTION: PUSH
+    VALUE:
+      id: 'item3'
+      title: 'Menu Item 3'
