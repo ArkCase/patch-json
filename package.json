@@ -17,8 +17,10 @@
     "keywords": [
         "JSON",
         "json-patch",
+        "patch-json",
         "patch",
         "path",
+        "diff",
         "data-structures"
     ],
     "license": "LGPLv3",
