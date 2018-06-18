@@ -1,0 +1,22 @@
+# Add Country  column to search result table
+$.components[?(@.id === 'search')].columns:
+  - ACTION: PUSH
+    VALUE:
+      name: 'Country'
+      prop: 'country'
+
+# Add "Save" menu item at the beginning
+$.components[?(@.id === 'menu')].items:
+  - ACTION: UNSHIFT
+    VALUE:
+      id: 'save'
+      title: 'Save'
+
+# Change 'remove' item's title
+$.components[?(@.id === 'menu')].items[?(@.id === 'remove')].title:
+  - ACTION: SET
+    VALUE: 'Delete'
+
+# Delete DOB item
+$.components[?(@.id === 'search')].columns[?(@.prop === 'dob')]:
+  - ACTION: UNSET

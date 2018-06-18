@@ -1,0 +1,38 @@
+{
+    "name": "patch-json",
+    "version": "0.0.1",
+    "description": "Apply patch to the JSON",
+    "author": "Sergey Kolomiets",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "bugs": {
+        "url": "https://github.com/ArkCase/json-patch/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ArkCase/json-patch"
+    },
+    "keywords": [
+        "JSON",
+        "json-patch",
+        "patch-json",
+        "patch",
+        "path",
+        "diff",
+        "data-structures"
+    ],
+    "license": "LGPLv3",
+    "dependencies": {
+        "ajv": "^6.5.1",
+        "js-yaml": "^3.12.0",
+        "jsonpath": "^1.0.0",
+        "lodash": "^4.17.10"
+    },
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "chai-json-equal": "^0.0.1",
+        "mocha": "^5.2.0"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "component": {
+        "menu": [
+            {
+                "id": "item1",
+                "title": "Menu Item 1"
+            },
+            {
+                "id": "item2",
+                "title": "Menu Item 2"
+            },
+            {
+                "id": "item3",
+                "title": "Menu Item 3"
+            }
+        ]
+    }
+}

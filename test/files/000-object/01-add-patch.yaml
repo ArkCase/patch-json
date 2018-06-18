@@ -1,0 +1,6 @@
+# Extend component by new "subcomponent" property
+component.subcomponent:
+  - ACTION: SET
+    VALUE:
+      title: 'Subcomponent title'
+      description: 'Subcomponent description'

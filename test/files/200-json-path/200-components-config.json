@@ -1,0 +1,36 @@
+{
+    "components": [
+        {
+            "id": "search",
+            "title": "Search",
+            "columns": [
+                {
+                    "name": "First Name",
+                    "prop": "firstName"
+                },
+                {
+                    "name": "Last Name",
+                    "prop": "lastName"
+                },
+                {
+                    "name": "DOB",
+                    "prop": "dob"
+                }
+            ]
+        },
+        {
+            "id": "menu",
+            "title": "Menu",
+            "items": [
+                {
+                    "id": "add",
+                    "title": "Add"
+                },
+                {
+                    "id": "remove",
+                    "title": "Remove"
+                }
+            ]
+        }
+    ]
+}
