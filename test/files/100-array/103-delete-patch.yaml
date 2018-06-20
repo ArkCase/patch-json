@@ -1,0 +1,6 @@
+# Delete two components: search and chat
+components:
+  - ACTION: DELETE
+    ITEM: "[?(@.id === 'search')]"
+  - ACTION: DELETE
+    ITEM: "[?(@.id === 'chat')]"

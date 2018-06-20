@@ -13,6 +13,8 @@ Patch JSON is utility and YAML-based language to make changes over JSON and prod
     - [Array actions](#array-actions)
         - [PUSH](#push)
         - [UNSHIFT](#unshift)
+        - [INSERT](#insert)
+        - [DELETE](#delete)
 - [API](#api)
     - [Methods](#methods)
     - [Errors](#errors)
@@ -40,7 +42,7 @@ You can use few approaches to reach element from JSON object.
     * Getting menu title:  **component.menu.title**
     * Getting "open" item of menu: **component.menu.items[0]**
     
-2. JSONPath notation. More powerfull notation that allows us to use expressions to get element:
+2. [JSONPath](https://github.com/dchester/jsonpath#jsonpath-syntax) notation. More powerfull notation that allows us to use expressions to get element:
      * Getting menu title: **$.component.menu.title**
      * Getting "open" item of menu: **$.component.menu.items[?(@.id === 'open')]**
 
@@ -123,8 +125,8 @@ Append new item to the end of an array
 
 ```yaml
 component:
-    ACTION: PUSH
-    VALUE:
+    - ACTION: PUSH
+      VALUE:
         newProperty:
             prop1: value1
 ```
@@ -138,10 +140,43 @@ Add item to the beginning of an array
 
 ```yaml
 component:
-    ACTION: UNSHIFT
+  - ACTION: UNSHIFT
     VALUE:
-        newProperty:
-            prop1: value1
+      newProperty:
+        prop1: value1
+```
+
+### INSERT
+Insert item into array
+
+**Parameters**
+* **ACTION:** INSERT
+* **[AFTER] or [BEFORE] :** {String} [JSONPath](https://github.com/dchester/jsonpath#jsonpath-syntax) value
+* **VALUE:** {any} inserted value
+
+```yaml
+components:
+  - ACTION: INSERT
+    AFTER: "[?(@.id === 'search')]"
+    VALUE:
+      id: 'delete'
+  - ACTION: INSERT
+    BEFORE: "[?(@.id === 'results')]"
+    VALUE:
+      id: 'users'
+```
+
+### DELETE
+Delete item from array
+
+**Parameters**
+* **ACTION:** DELETE
+* **ITEM:** {String} [JSONPath](https://github.com/dchester/jsonpath#jsonpath-syntax) value
+
+```yaml
+components:
+  - ACTION: DELETE
+    ITEM: "[?(@.id === 'search')]"
 ```
 
 ## API
@@ -152,8 +187,8 @@ component:
 **validate(yamlString) -> Boolean**
 
 ### Errors
-Patch JSON uses exceptions throwing to process any errors.
-Error object contains **name** property that defines type of error:
+Patch JSON uses exceptions to process errors.
+Error object contains **name** property that defines error type:
 1. JSON_VALIDATION_ERROR
 1. YAML_VALIDATION_ERROR
 1. YAML_STRUCTURE_ERROR
@@ -167,12 +202,13 @@ Also it contains **message** and **stack** properties to get additional info abo
         jsonPath.patch(jsonString, yamlString)
     } catch(ex) {
         if (ex.name === 'JSON_VALIDATION_ERROR') {
-        
+            
         } else if (ex.name === 'YAML_VALIDATION_ERROR') {
         
         } else if (ex.name === 'YAML_STRUCTURE_ERROR') {
         
         } else if (ex.name === 'PATCH_ERROR') {
+            
         }
     
     }
@@ -180,4 +216,4 @@ Also it contains **message** and **stack** properties to get additional info abo
 
 
 ## References
-1. [JSONPath](https://github.com/dchester/jsonpath)
+1. [JSONPath](https://github.com/dchester/jsonpath#jsonpath-syntax) syntax description
