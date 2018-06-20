@@ -1,6 +1,6 @@
 {
     "name": "patch-json",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "description": "Apply patch to the JSON",
     "author": "Sergey Kolomiets",
     "main": "index.js",
@@ -8,11 +8,11 @@
         "test": "mocha"
     },
     "bugs": {
-        "url": "https://github.com/ArkCase/json-patch/issues"
+        "url": "https://github.com/ArkCase/patch-json/issues"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/ArkCase/json-patch"
+        "url": "https://github.com/ArkCase/patch-json"
     },
     "keywords": [
         "JSON",

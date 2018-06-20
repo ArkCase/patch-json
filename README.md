@@ -15,6 +15,7 @@ Patch JSON is utility and YAML-based language to make changes over JSON and prod
         - [UNSHIFT](#unshift)
 - [API](#api)
     - [Methods](#methods)
+    - [Errors](#errors)
 - [References](#references)
 
 
@@ -149,6 +150,32 @@ component:
 
 
 **validate(yamlString) -> Boolean**
+
+### Errors
+Patch JSON uses exceptions throwing to process any errors.
+Error onject contains name property that defines type of error:
+1. JSON_VALIDATION_ERROR
+1. YAML_VALIDATION_ERROR
+1. YAML_STRUCTURE_ERROR
+1. PATCH_ERROR
+
+
+```javascript
+    try {
+        jsonPath.patch(jsonString, yamlString)
+    } catch(ex) {
+        if (ex.name === 'JSON_VALIDATION_ERROR') {
+        
+        } else if (ex.name === 'YAML_VALIDATION_ERROR') {
+        
+        } else if (ex.name === 'YAML_STRUCTURE_ERROR') {
+        
+        } else if (ex.name === 'PATCH_ERROR') {
+        }
+    
+    }
+```
+
 
 ## References
 1. [JSONPath](https://github.com/dchester/jsonpath)

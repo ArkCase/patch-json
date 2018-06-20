@@ -16,7 +16,6 @@ const DATA = [
 ];
 
 
-
 describe('Array testing', () => {
     it('should append new item at the end of array', (done) => {
         let data = DATA[0];

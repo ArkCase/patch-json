@@ -48,5 +48,4 @@ describe('Object testing', () => {
         );
         done();
     });
-
 });
