@@ -1,0 +1,14 @@
+components:
+  # Add Forum component after Search
+  - ACTION: INSERT
+    AFTER: "[?(@.id === 'search')]"
+    VALUE:
+      id: 'forum'
+      title: 'Forum'
+
+  # Add Chat component before Results
+  - ACTION: INSERT
+    BEFORE: "[?(@.id === 'results')]"
+    VALUE:
+      id: 'chat'
+      title: 'Chat'

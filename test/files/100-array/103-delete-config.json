@@ -1,0 +1,9 @@
+{
+    "components":[
+        {"id": "search", "title": "Search"},
+        {"id": "forum", "title": "Forum"},
+        {"id": "dataForm", "title": "Data Form"},
+        {"id": "chat", "title": "Chat"},
+        {"id": "results", "title": "Results"}
+    ]
+}

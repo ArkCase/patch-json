@@ -1,0 +1,7 @@
+{
+    "components":[
+        {"id": "search", "title": "Search"},
+        {"id": "dataForm", "title": "Data Form"},
+        {"id": "results", "title": "Results"}
+    ]
+}
