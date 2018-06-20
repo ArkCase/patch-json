@@ -1,0 +1,5 @@
+components:
+  - ACTION: PUSH
+    VALUE:
+      id: 'comp1'
+      title: 'Component 1'

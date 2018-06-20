@@ -1,0 +1,5 @@
+components:
+  - ACTION: UNSHIFT
+    VALUE:
+      id: 'comp1'
+      title: 'Component 1'
