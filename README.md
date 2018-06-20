@@ -153,11 +153,13 @@ component:
 
 ### Errors
 Patch JSON uses exceptions throwing to process any errors.
-Error onject contains name property that defines type of error:
+Error object contains **name** property that defines type of error:
 1. JSON_VALIDATION_ERROR
 1. YAML_VALIDATION_ERROR
 1. YAML_STRUCTURE_ERROR
 1. PATCH_ERROR
+
+Also it contains **message** and **stack** properties to get additional info about error.
 
 
 ```javascript
