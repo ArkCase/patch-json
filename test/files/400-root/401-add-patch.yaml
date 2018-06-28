@@ -1,0 +1,6 @@
+# Add modules into the roor
+$.modules:
+  - ACTION: SET
+    VALUE:
+      title: 'Modules'
+      description: 'Modules description'
